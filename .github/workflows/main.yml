@@ -1,0 +1,5 @@
+name: myFirstGithubActions
+on:
+  push:
+    branches:
+      - main
