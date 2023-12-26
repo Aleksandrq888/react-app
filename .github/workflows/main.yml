@@ -6,6 +6,14 @@ on:
 jobs:
   my_test:
       runs-on: ubuntu-latest
+      
       steps:
-      - name: Print text
-        run: echo "Hello actions"
+      - name: Print text test
+        run: echo "Hello test"
+        
+  my_deploy:
+      runs-on: ubuntu-latest
+      needs: [my_test]
+      steps:
+      - name: Print text deploy
+        run: echo "Hello deploy"      
