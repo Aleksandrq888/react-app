@@ -1,4 +1,7 @@
 name: myFirstGithubActions
+env:
+  APP_NAME: "React App"
+  VERSION: "React deploy ver ${{ github.sha }}"
 on:
   push:
     branches:
@@ -10,6 +13,7 @@ jobs:
       steps:
       - name: Print text test
         run: echo "Hello test"
+        run: echo "App name - ${{ env.APP_NAME }}"
         
   my_deploy:
       runs-on: ubuntu-latest
